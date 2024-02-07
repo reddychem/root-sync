@@ -5,14 +5,14 @@ metadata:
   namespace: ns-sync-hdfc-demo
   annotations:
     # configmanagement.gke.io/cluster-selector: dev-clusters
-    configsync.gke.io/cluster-name-selector: docker-desktop
+    configsync.gke.io/cluster-name-selector: minikube
 spec:
   override:
     enableShellInRendering: true
   sourceType: git
   sourceFormat: unstructured
   git:
-    repo: https://github.com/darshanbm099/ns-sync-hdfc-demo.git
+    repo: https://github.com/reddychem/ns-sync-hdfc-demo.git
     branch: main
     dir: application-namespace-config/ns-sync-hdfc-demo/deployment-manifests/deploy/
     auth: none
